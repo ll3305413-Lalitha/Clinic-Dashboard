@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records | Clinic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">+</div>
+            <span>Clinic Dashboard</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="patients.html" class="nav-item">
+                <span>♙</span>
+                Patient Management
+            </a>
+
+            <a href="doctors.html" class="nav-item">
+                <span>⚕</span>
+                Doctor Management
+            </a>
+
+            <a href="appointments.html" class="nav-item">
+                <span>▣</span>
+                Appointment Management
+            </a>
+
+            <a href="medical-records.html" class="nav-item active">
+                <span>▤</span>
+                Medical Records
+            </a>
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Medical Records</h1>
+                <p>Manage patient medical and visit records</p>
+            </div>
+
+            <div class="dashboard-user">
+                <span class="user-icon">●</span>
+                <span>Admin</span>
+                <a href="login.html" class="logout-button">Logout</a>
+            </div>
+
+        </header>
+
+        <section class="page-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Medical Records List</h2>
+                    <p>View and manage patient medical records</p>
+                </div>
+
+                <button id="addMedicalRecordButton">
+                    + Add Medical Record
+                </button>
+            </div>
+
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="medicalRecordSearch"
+                    placeholder="Search medical records..."
+                >
+            </div>
+
+            <div id="medicalRecordList" class="medical-record-list">
+                <p>Loading medical records...</p>
+            </div>
+
+            <button id="backButton">
+                Back to Dashboard
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

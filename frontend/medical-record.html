@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record | Clinic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">+</div>
+            <span>Clinic Dashboard</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="patients.html" class="nav-item">
+                <span>♙</span>
+                Patient Management
+            </a>
+
+            <a href="doctors.html" class="nav-item">
+                <span>⚕</span>
+                Doctor Management
+            </a>
+
+            <a href="appointments.html" class="nav-item">
+                <span>▣</span>
+                Appointment Management
+            </a>
+
+            <a href="medical-records.html" class="nav-item active">
+                <span>▤</span>
+                Medical Records
+            </a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Add Medical Record</h1>
+                <p>Medical Records &nbsp;›&nbsp; Add Record</p>
+            </div>
+
+            <div class="dashboard-user">
+                <span class="user-icon">●</span>
+                <span>Admin</span>
+                <a href="login.html" class="logout-button">Logout</a>
+            </div>
+        </header>
+
+        <section class="form-page-section">
+
+            <div id="medicalRecordForm" class="professional-form-card">
+
+                <input type="hidden" id="recordId">
+
+                <div class="form-section">
+                    <h2>Visit Details</h2>
+
+                    <div class="form-grid two-columns">
+
+                        <div class="form-group">
+                            <label for="recordPatient">Patient</label>
+                            <select id="recordPatient" required>
+                                <option value="">Select patient</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recordDoctor">Doctor</label>
+                            <select id="recordDoctor" required>
+                                <option value="">Select doctor</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="recordDate">Visit Date</label>
+                            <input type="date" id="recordDate" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Medical Information</h2>
+
+                    <div class="form-group">
+                        <label for="recordSymptoms">Symptoms / Reason</label>
+                        <textarea id="recordSymptoms" placeholder="Enter symptoms or reason for visit" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recordDiagnosis">Diagnosis</label>
+                        <textarea id="recordDiagnosis" placeholder="Enter diagnosis" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recordPrescription">Prescription / Notes</label>
+                        <textarea id="recordPrescription" placeholder="Enter prescription or notes" required></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <a href="medical-records.html" class="cancel-button">← Cancel</a>
+                    <button id="saveRecordButton">Save Record</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

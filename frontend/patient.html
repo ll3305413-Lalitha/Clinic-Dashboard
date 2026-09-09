@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Patient | Clinic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">+</div>
+            <span>Clinic Dashboard</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="patients.html" class="nav-item active">
+                <span>♙</span>
+                Patient Management
+            </a>
+
+            <a href="doctors.html" class="nav-item">
+                <span>⚕</span>
+                Doctor Management
+            </a>
+
+            <a href="appointments.html" class="nav-item">
+                <span>▣</span>
+                Appointment Management
+            </a>
+
+            <a href="medical-records.html" class="nav-item">
+                <span>▤</span>
+                Medical Records
+            </a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Add Patient</h1>
+                <p>Patient Management &nbsp;›&nbsp; Add Patient</p>
+            </div>
+
+            <div class="dashboard-user">
+                <span class="user-icon">●</span>
+                <span>Admin</span>
+                <a href="login.html" class="logout-button">Logout</a>
+            </div>
+        </header>
+
+        <section class="form-page-section">
+
+            <div id="patientForm" class="professional-form-card">
+
+                <input type="hidden" id="patientId">
+
+                <div class="form-section">
+                    <h2>Personal Information</h2>
+
+                    <div class="form-grid three-columns">
+
+                        <div class="form-group">
+                            <label for="patientName">Full Name</label>
+                            <input type="text" id="patientName" placeholder="Enter full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patientAge">Age</label>
+                            <input type="number" id="patientAge" placeholder="Enter age" required onwheel="this.blur()">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patientGender">Gender</label>
+                            <select id="patientGender" required>
+                                <option value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Contact Information</h2>
+
+                    <div class="form-grid two-columns">
+
+                        <div class="form-group">
+                            <label for="patientPhone">Phone</label>
+                            <input type="tel" id="patientPhone" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patientEmail">Email</label>
+                            <input type="email" id="patientEmail" placeholder="Enter email address" required>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patientAddress">Address</label>
+                        <textarea id="patientAddress" placeholder="Enter full address" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Additional Information</h2>
+
+                    <div class="form-grid two-columns">
+
+                        <div class="form-group">
+                            <label for="patientBloodGroup">Blood Group</label>
+                            <select id="patientBloodGroup" required>
+                                <option value="">Select blood group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="patients.html" class="cancel-button">← Cancel</a>
+                    <button id="savePatientButton">Save Patient</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

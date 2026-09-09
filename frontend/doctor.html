@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor | Clinic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="sidebar-logo">+</div>
+            <span>Clinic Dashboard</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="patients.html" class="nav-item">
+                <span>♙</span>
+                Patient Management
+            </a>
+
+            <a href="doctors.html" class="nav-item active">
+                <span>⚕</span>
+                Doctor Management
+            </a>
+
+            <a href="appointments.html" class="nav-item">
+                <span>▣</span>
+                Appointment Management
+            </a>
+
+            <a href="medical-records.html" class="nav-item">
+                <span>▤</span>
+                Medical Records
+            </a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>Add Doctor</h1>
+                <p>Doctor Management &nbsp;›&nbsp; Add Doctor</p>
+            </div>
+
+            <div class="dashboard-user">
+                <span class="user-icon">●</span>
+                <span>Admin</span>
+                <a href="login.html" class="logout-button">Logout</a>
+            </div>
+        </header>
+
+        <section class="form-page-section">
+
+            <div id="doctorForm" class="professional-form-card">
+
+                <input type="hidden" id="doctorId">
+
+                <div class="form-section">
+                    <h2>Doctor Information</h2>
+
+                    <div class="form-grid two-columns">
+
+                        <div class="form-group">
+                            <label for="doctorName">Full Name</label>
+                            <input type="text" id="doctorName" placeholder="Enter doctor's full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctorSpecialization">Specialization</label>
+                            <input type="text" id="doctorSpecialization" placeholder="Enter specialization" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Contact Information</h2>
+
+                    <div class="form-grid two-columns">
+
+                        <div class="form-group">
+                            <label for="doctorPhone">Phone</label>
+                            <input type="tel" id="doctorPhone" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="doctorEmail">Email</label>
+                            <input type="email" id="doctorEmail" placeholder="Enter email address" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Availability</h2>
+
+                    <div class="form-group">
+                        <label for="doctorAvailability">Availability</label>
+                        <input type="text" id="doctorAvailability" placeholder="Example: Mon - Sat, 10:00 AM - 06:00 PM" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="doctors.html" class="cancel-button">← Cancel</a>
+                    <button id="saveDoctorButton">Save Doctor</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
